@@ -8,6 +8,10 @@ import pjson from '../../package.json'
 export default {
   name: 'VueCursor',
   props: {
+    blendMode: {
+      default: 'difference',
+      type: String
+    }
   },
   data: () => ({
     DOM: {},
@@ -77,8 +81,10 @@ export default {
       this.lastScale = this.lerp(this.lastScale, this.scale, 0.15)
       this.lastOpacity = this.lerp(this.lastOpacity, this.opacity, 0.1)
       this.DOM.dot.style.transform = `translateX(${(this.lastMousePos.dot.x)}px) translateY(${this.lastMousePos.dot.y}px)`
+      this.DOM.dot.style.mixBlendMode = this.blendMode
       this.DOM.circle.style.transform = `translateX(${(this.lastMousePos.circle.x)}px) translateY(${this.lastMousePos.circle.y}px) scale(${this.lastScale})`
       this.DOM.circle.style.opacity = this.lastOpacity
+      this.DOM.circle.style.mixBlendMode = this.blendMode
       requestAnimationFrame(() => this.render())
     },
     enter () {
@@ -102,7 +108,6 @@ export default {
  position absolute
  top 0
  left 0
- mix-blend-mode difference
  border-radius 50%
 
 .cursor__inner--dot

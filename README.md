@@ -1,39 +1,41 @@
 # vue-cursor
 
-## Project setup
-```
-npm install
+> Vue.js component
+
+
+## Installation
+
+``` bash
+$ npm install --save vue-cursor
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
+
+## Usage
+
+``` vue
+<template>
+  <div class="app">
+    <vue-cursor/>
+  </div>
+</template>
+
+<script>
+  import VueCursor from 'vue-cursor';
+  export default {
+    name: 'demo',
+    components: {
+      VueCursor
+    }
+  };
+</script>
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Properties
 
-### Run your tests
-```
-npm run test
-```
+* `blend-mode` **[String]**
 
-### Lints and fixes files
-```
-npm run lint
-```
+  Optional; `difference` by defualt. The blend mode.
 
-### Run your end-to-end tests
-```
-npm run test:e2e
-```
+# License
 
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+MIT

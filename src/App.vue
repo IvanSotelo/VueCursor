@@ -1,7 +1,7 @@
 <template lang="pug">
   #app
     .nav
-      a(data-hover) Hola
+      a(data-hover data-title="Nouakchott") Hola
     vue-cursor(blend-mode="screen")
 </template>
 

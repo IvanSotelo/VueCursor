@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "@controlla/controlla-postinstall": "^1.0.21",
-    "vue": "^2.6.10"
+    "vue": "^3.0.0"
   },
   "files": [
     "dist/*",
